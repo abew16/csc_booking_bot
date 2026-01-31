@@ -1,6 +1,7 @@
 # Configuration files with sensitive data
 config.ini
 *.key
+*.pub
 
 # Python
 __pycache__/
