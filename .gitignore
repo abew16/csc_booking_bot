@@ -1,5 +1,6 @@
 # Configuration files with sensitive data
 config.ini
+*.key
 
 # Python
 __pycache__/
@@ -25,6 +26,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.env
 
 # Database
 *.db
