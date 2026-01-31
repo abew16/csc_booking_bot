@@ -1,0 +1,10 @@
+services:
+  tennis-bot:
+    build: .
+    container_name: tennis_booking_bot
+    volumes:
+      - .:/app
+      - ./bookings.db:/app/bookings.db
+    env_file:
+      - .env
+    restart: always

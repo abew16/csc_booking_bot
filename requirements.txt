@@ -1,0 +1,3 @@
+python-telegram-bot==20.7
+selenium==4.15.2
+schedule==1.2.0
