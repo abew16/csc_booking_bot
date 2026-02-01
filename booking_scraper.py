@@ -38,7 +38,7 @@ class BookingScraper:
         
     # Use the environment variables defined in your Dockerfile
         chrome_bin = os.getenv('CHROME_BIN', '/usr/bin/chromium')
-        driver_path = os.getenv('CHROMEDRIVER_PATH', '/usr/bin/chromium-driver')
+        driver_path = os.getenv('CHROMEDRIVER_PATH', '/usr/bin/chromedriver')
         
         chrome_options.binary_location = chrome_bin
         service = Service(executable_path=driver_path)
