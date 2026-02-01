@@ -22,7 +22,7 @@ COPY . .
 
 # Set environment variables for Selenium to find Chromium
 ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEDRIVER_PATH=/usr/bin/chromium-driver
+ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
 # Command to run the bot
 CMD ["python", "main.py"]
