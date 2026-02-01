@@ -22,7 +22,7 @@ def test_full_booking_flow():
         url=config.get_booking_url(),
         username=config.get_username(),
         password=config.get_password(),
-        headless=False # Keep browser visible for debugging. Set to True for production.
+        headless=True # Keep browser visible for debugging. Set to True for production.
     )
     
     try:
