@@ -34,8 +34,16 @@ class BookingScraper:
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
         
+    # Use the environment variables defined in your Dockerfile
+        chrome_bin = os.getenv('CHROME_BIN', '/usr/bin/chromium')
+        driver_path = os.getenv('CHROMEDRIVER_PATH', '/usr/bin/chromium-driver')
+        
+        chrome_options.binary_location = chrome_bin
+        service = Service(executable_path=driver_path)
+        
         try:
-            self.driver = webdriver.Chrome(options=chrome_options)
+            # Pass the service object to the driver
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         except Exception as e:
             logger.error(f"Failed to initialize Chrome driver: {e}")
